@@ -117,7 +117,7 @@ nav {
 
 }
 
-@media (mix-width: 480px) {
+@media (max-width: 600px) {
     #additional-content{
         margin-top: 600px;
     }

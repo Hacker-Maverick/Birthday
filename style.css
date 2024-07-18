@@ -1,0 +1,124 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #ffccff, #ccffff);
+}
+
+.sitename {
+    font-size: 24px;
+    font-weight: bold;
+    animation: smoothColorChange 10s infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+ 
+}
+
+@keyframes smoothColorChange {
+    0% { color: darkblue; }
+    20% { color: brown; }
+    40% { color: black; }
+    60% { color: grey; }
+    80% { color: purple; }
+    100% { color: darkgreen; }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    background: #e0e0e0;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#surprise-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background: linear-gradient(90deg, #ff6666, #ffcc66, #66ff66, #66ccff, #cc66ff);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#surprise-button:hover {
+    background: linear-gradient(90deg, #cc66ff, #66ccff, #66ff66, #ffcc66, #ff6666);
+    transform: scale(1.1);
+    border: 1px solid black;
+}
+
+#birthday-message {
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#birthday-message h1 {
+    font-size: 2.5rem;
+    color: #ff69b4;
+    margin-bottom: 20px;
+    animation: rainbowText 1s infinite alternate;
+}
+
+@keyframes rainbowText {
+    0% { color: #ff69b4; }
+    20% { color: #ff6347; }
+    40% { color: #ffd700; }
+    60% { color: #adff2f; }
+    80% { color: #1e90ff; }
+    100% { color: #ba55d3; }
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: flex;
+}
+
+#additional-content{
+    margin-top: 85%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+
+}
+
+@media screen and (max-width:768px) {
+    #additional-content{
+        margin-top: 600px;
+    }
+}
